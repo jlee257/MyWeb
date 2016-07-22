@@ -9,6 +9,26 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-lg-2">
+          <nav class="navbar navbar-default navbar-fixed-side">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle=""></button>
+                <a class="navbar-brand" href="/">MyWeb</a>
+              </div>
+              <ul class="nav navbar-nav">
+                <li class="active menu-home"><a href="/" id="a-menu-home">Home</a></li>
+                <li class="menu-section1"><a href="#section1" id="a-menu-section1">Section 1</a></li> 
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="col-sm-9 col-lg-10" id="content-body">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
