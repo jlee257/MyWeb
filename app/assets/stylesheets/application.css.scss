@@ -44,10 +44,33 @@ section {
 
 #section1 {
 	background-color: rgb(236, 220, 200);
+	padding-left: 320px;
 }
 
 
-body, #content-body {
+body {
 	margin: 0px;
 	padding: 0px;
+}
+
+#content-body {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.navbar-fixed-side {
+	width: 300px;
+	margin: 0px;
+}
+
+
+@media (max-width: 767px) {
+	.navbar-fixed-side {
+		width: 100%;
+	}
+
+	#section1 {
+		padding-left: 20px;
+	}
 }

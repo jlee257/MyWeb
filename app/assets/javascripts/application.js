@@ -54,6 +54,23 @@ $(document).ready(function() {
       scrollTop: $("#section1").offset().top
     }, 300);
   });
+
+
+  // hide .navbar first
+  $(".navbar").hide();
+  
+  // fade in .navbar
+  $(function () {
+    $(window).scroll(function () {
+            // set distance user needs to scroll before we fadeIn navbar
+      if ($(this).scrollTop() > $(window).height()/2) {
+        $('.navbar').fadeIn();
+      } else {
+        $('.navbar').fadeOut();
+      }
+    });
+  });
+
 });
 
 
