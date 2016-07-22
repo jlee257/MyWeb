@@ -29,40 +29,54 @@ $(document).ready(function() {
     }
   }, {offset: "50%"});
 
-  // jQuery("a").click(function(event){
-  //   //check if it has a hash (i.e. if it's an anchor link)
-  //   if(this.hash){
-  //     var hash = this.hash.substr(1);
-  //     var $toElement = jQuery("[id="+hash+"]");
-  //     var toPosition = $toElement.position().top;
-  //     //scroll to element
-  //     $("body,html").animate({
-  //       scrollTop : toPosition - 70
-  //     } ,1000)
+
+
+
+  // Menu items auto scrolling
+  $("a.navbar-item-link").click(function(event) {
+    event.preventDefault();
+
+    var childindex = $(event.target).parent().index();
+    var $targetsection = $("#content-body").children().eq(childindex).children(":first");
+    var targetposition = $targetsection.offset().top;
+
+
+    if ($(window).width() < 768 && childindex != 0) {
+      targetposition = targetposition - 50;
+    }
+
+    $('html, body').animate({
+    scrollTop: targetposition
+    }, 500);
+
+
+    // if (childindex == 0) {
+    //   $('html, body').animate({
+    //   scrollTop: $targetsection.offset().top
+    //   }, 500);
+    // } else {
+    //   $('html, body').animate({
+    //   scrollTop: $targetsection.offset().top - offadjust()
+    //   }, 500);
+    // }
+  });
+
+  // offadjust = function() {
+  //   if ($(window).width() < 768) {
+  //     return 50;
+  //   } else {
+  //     return 0;
   //   }
-  // });
-  $("#a-menu-home").click(function(event) {
-    event.preventDefault();
-    $('html, body').animate({
-      scrollTop: $("#home").offset().top
-    }, 300);
-  });
-
-  $("#a-menu-section1").click(function(event) {
-    event.preventDefault();
-    $('html, body').animate({
-      scrollTop: $("#section1").offset().top
-    }, 300);
-  });
+  // };
 
 
-  // hide .navbar first
+
+
+  // Bootstrap Navbar fade-in/fad-out
   $(".navbar").hide();
   
-  // fade in .navbar
   $(function () {
     $(window).scroll(function () {
-            // set distance user needs to scroll before we fadeIn navbar
       if ($(this).scrollTop() > $(window).height()/2) {
         $('.navbar').fadeIn();
       } else {
@@ -70,6 +84,9 @@ $(document).ready(function() {
       }
     });
   });
+
+
+ 
 
 });
 

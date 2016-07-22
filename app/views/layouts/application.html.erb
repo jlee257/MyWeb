@@ -9,8 +9,11 @@
   </head>
 
   <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-default navbar-fixed-top navbar-fixed-side">
       <div class="container-fluid">
+
+        <!-- Navbar Header -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -18,44 +21,38 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-
           <a class="navbar-brand" href="/">MyWeb</a>
         </div>
+
+        <!-- Navbar Menu Items -->
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active menu-home"><a href="/" id="a-menu-home">Home</a></li>
-            <li class="menu-section1"><a href="#section1" id="a-menu-section1">Section 1</a></li> 
+            <li class="active"><a href="/" class="navbar-item-link">Home</a></li>
+            <li><a href="#section1" class="navbar-item-link">Section 1</a></li>
+            <li><a href="#section2" class="navbar-item-link">Section 2</a></li> 
+            <li><a href="#section3" class="navbar-item-link">Section 3</a></li>
+            <li><a href="#section-about" class="navbar-item-link">About</a></li>  
           </ul>
         </div>
       </div>
     </nav>
+
+    <!-- Sections -->
     <div class="container-fluid" id="content-body">
       <%= yield %>
     </div>
   </body>
-
-
-
-<!--   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-lg-2">
-          <nav class="navbar navbar-default navbar-fixed-side">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <button class="navbar-toggle" data-toggle=""></button>
-                <a class="navbar-brand" href="/">MyWeb</a>
-              </div>
-              <ul class="nav navbar-nav">
-                <li class="active menu-home"><a href="/" id="a-menu-home">Home</a></li>
-                <li class="menu-section1"><a href="#section1" id="a-menu-section1">Section 1</a></li> 
-              </ul>
-            </div>
-          </nav>
-        </div>
-        <div class="col-sm-9 col-lg-10" id="content-body">
-        </div>
-      </div>
-    </div>
-  </body> -->
 </html>
+
+
+
+<!-- Navbar Menu Items
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active menu-home"><a href="/" class="navbar-item-link" id="a-menu-home">Home</a></li>
+            <li class="menu-section1"><a href="#section1" class="navbar-item-link" id="a-menu-section1">Section 1</a></li>
+            <li class="menu-section2"><a href="#section2" class="navbar-item-link" id="a-menu-section2">Section 2</a></li> 
+            <li class="menu-section3"><a href="#section3" class="navbar-item-link" id="a-menu-section3">Section 3</a></li>
+            <li class="menu-about"><a href="#section-about" class="navbar-item-link" id="a-menu-about">About</a></li>  
+          </ul>
+        </div> -->
