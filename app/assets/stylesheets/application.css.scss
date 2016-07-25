@@ -38,6 +38,11 @@ div {
 	}
 }
 
+#content-body {
+	margin: 0px;
+	padding: 0px;
+}
+
 body {
 	margin: 0px;
 	padding: 0px;
@@ -56,13 +61,21 @@ section {
 }
 
 section#home {
-	height: 100vh;
+	min-height: 100vh;
+
 }
 
-section#about {
-	height: 100vh;
+section#section-about {
+	min-height: 100vh;
 	background-color: rgb(186, 234, 244);
 }
+
+section > div.container {
+	margin: 0;
+}
+
+
+
 
 
 
@@ -83,6 +96,43 @@ ul.nav > li {
 
 
 
+
+// Bootstrap Fixes
+.btn {
+	border-radius: 0;
+}
+
+.btn-left-margin {
+	margin-left: 7px;
+}
+
+#alert-box {
+	position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+
+
+
+// Misc
+#comment-list {
+	margin-top: 50px;
+}
+
+#add-comment-form {
+	margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
 // Dynamic scaling
 @media (max-width: 767px) {
 	.navbar-fixed-side {
@@ -91,5 +141,9 @@ ul.nav > li {
 
 	div.content-block {
 		padding: 0px;
+	}
+
+	#message {
+		padding: 30px;
 	}
 }

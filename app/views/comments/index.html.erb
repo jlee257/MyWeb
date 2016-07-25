@@ -1,0 +1,21 @@
+<% @comments.each do |comment| %>
+  <div class="container comment-container" stype="margin-top: 30px">
+  <div class="row">
+
+    <span>
+        <strong><%= comment.id %> | <%= comment.name %></strong> 
+    </span>
+
+    <span class="pull-right">
+      <%= comment.created_at %>
+      <%= link_to 'Delete',  { controller: "comments", action: :destroy, id: comment.id }, remote: true, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs button-delete-comment" %>
+    </span>
+  </div>
+  <div class="row" style="margin-top: 10px">
+    <p><strong>contact: </strong><%= comment.contact %></p>
+    <p><strong>ip-address: </strong><%= comment.ip_address %></p>
+    <p><%= comment.body %></p>
+  </div>
+  <hr>
+</div>
+<% end %>

@@ -13,23 +13,27 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require jquery.validate
+//= require additional-methods
 //= require bootstrap-sprockets
 //= require waypoints
 //= require_tree .
 
 
 $(document).ready(function() {
-  $("#section1").waypoint(function(direction) {
-    if (direction == "up") {
-      $("ul.nav li").removeClass("active");
-      $("ul.nav li.menu-home").addClass("active");
-    } else {
-      $("ul.nav li").removeClass("active");
-      $("ul.nav li.menu-section1").addClass("active");
+
+  // Menu items active
+  $(".section-block").waypoint(function(direction) {
+    var childindex = $(this).parent().index();
+
+    $("ul.nav li").removeClass("active");
+    if (direction == "up" && childindex > 0) {
+      childindex = childindex - 1;
     }
-  }, {offset: "50%"});
 
-
+    $targetitem = $("#navbar-collapse-1").find(":first-child").children().eq(childindex);
+    $targetitem.addClass("active");
+  }, {offset: "30%"});
 
 
   // Menu items auto scrolling
@@ -37,7 +41,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var childindex = $(event.target).parent().index();
-    var $targetsection = $("#content-body").children().eq(childindex).children(":first");
+    var $targetsection = $("#content-body").children().eq(childindex).find(":first-child");
     var targetposition = $targetsection.offset().top;
 
 
@@ -48,29 +52,7 @@ $(document).ready(function() {
     $('html, body').animate({
     scrollTop: targetposition
     }, 500);
-
-
-    // if (childindex == 0) {
-    //   $('html, body').animate({
-    //   scrollTop: $targetsection.offset().top
-    //   }, 500);
-    // } else {
-    //   $('html, body').animate({
-    //   scrollTop: $targetsection.offset().top - offadjust()
-    //   }, 500);
-    // }
   });
-
-  // offadjust = function() {
-  //   if ($(window).width() < 768) {
-  //     return 50;
-  //   } else {
-  //     return 0;
-  //   }
-  // };
-
-
-
 
   // Bootstrap Navbar fade-in/fad-out
   $(".navbar").hide();
@@ -86,9 +68,38 @@ $(document).ready(function() {
   });
 
 
- 
+  // comment visibility
+  $("#button-leave-message").on("click", function() {
+    $("#add-comment-form").slideToggle('fast');
+  });
+
+  $("#button-cancel-message").on("click", function() {
+    $("#add-comment-form").slideToggle('fast');
+  });
+
+  $("#button-review-message").on("click", function() {
+    $("#comment-list").slideToggle('fast');
+  });
+
+  if ( $("#comment-badge").text() === "0" ) {
+      $("#button-review-message").hide();   
+  }
+  $("#alert-box").hide();
+  $("#comment-list").hide();
+  $("#add-comment-form").hide();
+
+  $( document ).ajaxComplete(function( event, xhr, settings ) {
+    if ( $("#comment-badge").text() === "0" ) {
+      $("#button-review-message").hide();
+      $("#comment-list").hide();
+    } else {
+      $("#button-review-message").show();
+    }
+  });
+
 
 });
+
 
 
 

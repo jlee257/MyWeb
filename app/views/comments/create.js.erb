@@ -1,0 +1,26 @@
+$(document).ready(function() {
+
+  // Ajax
+  $("#new_comment").one("ajax:success", function(e, data, status, xhr) {
+    $("#comment-list").append("<%= escape_javascript render(:partial => '/comments/show', :locals => { :comment => @new_comment }) %>");
+    var c = parseInt($("#comment-badge").text()) + 1;
+    $("#comment-badge").text(c);
+    
+    $alert_box = $("#alert-box");
+    $alert_box.html("<strong>Done!</strong> Message has been saved");
+    $alert_box.removeClass("alert-success").removeClass("alert-warning").removeClass("alert-danger");
+    $alert_box.addClass("alert-success");
+    $alert_box.fadeIn(300).delay(2600).fadeOut(300);
+  });
+
+  $("#new_comment").one("ajax:error", function(e, data, status, xhr) {
+    $("#comment-list").append("<p>ERROR</p>");
+
+    $alert_box = $("#alert-box");
+    $alert_box.html("<strong>Warning!</strong> Failed to saved the message");
+    $alert_box.removeClass("alert-success").removeClass("alert-warning").removeClass("alert-danger");
+    $alert_box.addClass("alert-danger");
+    $alert_box.fadeIn(300).delay(2600).fadeOut(300);
+  });
+
+});

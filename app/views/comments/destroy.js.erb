@@ -1,0 +1,28 @@
+$(document).ready(function() {
+  var flag = true;
+  // Ajax
+  $(".button-delete-comment").one("ajax:success", function(e, data, status, xhr) {
+    if (flag) {
+      $(this).closest(".comment-container").remove();
+      var c = parseInt($("#comment-badge").text()) - 1;
+      $("#comment-badge").text(c);
+      flag = false;
+
+      $alert_box = $("#alert-box");
+      $alert_box.html("<strong>Done!</strong> Message has been removed");
+      $alert_box.removeClass("alert-success").removeClass("alert-warning").removeClass("alert-danger");
+      $alert_box.addClass("alert-warning");
+      $alert_box.fadeIn(300).delay(2600).fadeOut(300);
+    };
+  });
+
+  $(".button-delete-comment").one("ajax:error", function(e, data, status, xhr) {
+    $("#comment-list").append(xhr);
+    $alert_box = $("#alert-box");
+    $alert_box.html("<strong>Warning!</strong> Failed to remove the message");
+    $alert_box.removeClass("alert-success").removeClass("alert-warning").removeClass("alert-danger");
+    $alert_box.addClass("alert-danger");
+    $alert_box.fadeIn(300).delay(2600).fadeOut(300);
+  });
+
+});

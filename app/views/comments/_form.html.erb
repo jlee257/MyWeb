@@ -1,0 +1,35 @@
+<%= form_for(@new_comment, url: {controller: "comments", action: "create"}, html: {class: 'form'}, remote: true) do |f| %>
+  <% if @new_comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@new_comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% @new_comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group" id="name-group">
+    <label for="form-element-name">Name</label>
+    <input type="text" class="form-control" id="form-element-name" placeholder="name" name="comment[name]" required>
+  </div>
+
+  <div class="field form-group">
+    <label for="form-element-contact">Contact</label>
+    <input type="text" class="form-control" id="form-element-contact" placeholder="abc@abc.com" name="comment[contact]" required>
+  </div>
+  <div class="field form-group control-group">
+    <label for="form-element-comment">Comment</label>
+    <textarea class="form-control" id="form-element-comment" placeholder="comment" name="comment[body]" rows="3" required></textarea>
+  </div>
+
+  <div class="row">
+    <%= hidden_field_tag "comment[ip_address]", request.remote_ip %> 
+    <div class="actions pull-right top-pad-25">
+      <%= f.submit 'Submit', :class => 'btn btn-primary button-submit-comment' %>
+      <%= button_tag "Cancel", type: :reset,  :class => 'btn btn-primary btn-left-margin', :id => "button-cancel-message" %>
+    </div>
+  </div>
+<% end %>
