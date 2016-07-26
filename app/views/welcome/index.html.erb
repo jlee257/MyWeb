@@ -13,6 +13,19 @@
 <div class="content-block">
   <section class="section-block" id="section1">
     <h2>Section 1</h2>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <div style="margin: 50px; width: 300px; height: 300px" class="left-side">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div style="margin: 50px; width: 300px; height: 300px" class="right-side pull-right">
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 </div>
 
@@ -47,13 +60,17 @@
         </button>
 
       </div>
-      <div class="row" id="add-comment-form">
-        <%= render :partial => '/comments/form' %>
+      <div class="panel panel-default" id="add-comment-form">
+        <div class="panel-body">
+          <%= render :partial => '/comments/form' %>
+        </div>
       </div>
-      <div class="row" id="comment-list">
-        <% @comments.each do |comment| %>
-          <%= render :partial => '/comments/show', :locals => { :comment => comment } %>
-        <% end %>
+      <div class="panel panel-default" id="comment-list-panel">
+        <ul class="list-group" id="comment-list">
+          <% @comments.each do |comment| %>
+            <%= render :partial => '/comments/show', :locals => { :comment => comment } %>
+          <% end %>
+        </ul>
       </div>
     </div>
 

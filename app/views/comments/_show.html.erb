@@ -1,21 +1,20 @@
-<div class="container comment-container">
-  <div class="row">
+<li class="list-group-item comment-container">
+  <div class="container-fluid">
+    <div class="row">
 
-    <span>
-        <strong><%= comment.name %></strong> 
-    </span>
+      <span class="comment-username">
+          <strong><%= comment.name %></strong> 
+      </span>
 
-    <span class="pull-right">
-      <%= comment.created_at %>
-      <%= link_to 'Delete',  { controller: "comments", action: :destroy, id: comment.id }, remote: true, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs button-delete-comment btn-left-margin" %>
-    </span>
-  </div>
-  <div class="row">
-  <p>
-    <%= comment.body %>
-  </p>
-  <hr>
-
-
-  </div>
-</div>
+      <span class="pull-right">
+        <span class="comment-date"><%= comment.created_at %></span>
+        <%= link_to 'Delete',  { controller: "comments", action: :destroy, id: comment.id }, remote: true, method: :delete, data: { confirm: 'Are you sure?' }, class: "button-delete-comment btn-left-margin" %>
+      </span>
+    </div>
+    <div class="row">
+    <p>
+      <%= comment.body %>
+    </p>
+    </div>
+  </idv>
+</li>

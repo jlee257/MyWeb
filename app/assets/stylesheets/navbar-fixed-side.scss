@@ -1,4 +1,5 @@
 @import 'bootstrap/variables';
+@import 'colors';
 
 .navbar-fixed-side {
   @media (max-width: $grid-float-breakpoint) {
@@ -7,12 +8,12 @@
   }
 
   @media (min-width: $grid-float-breakpoint) {
-    $navbar-default-link-hover-bg: darken($navbar-default-bg, 3%);
+    $navbar-default-link-hover-bg: lighten($metro-black, 5%);
     $navbar-inverse-link-hover-bg: lighten($navbar-inverse-bg, 5%);
     $navbar-inverse-border: lighten($navbar-inverse-bg, 8%);
 
     position: fixed;
-    margin: 0 -15px;
+    margin: 0;
     height: 100vh;
     width: inherit;
     overflow: auto;
@@ -21,7 +22,7 @@
     border-radius: 0;
 
     .container, .container-fluid {
-      width: auto;
+      width: 100%;
       padding-left: 0;
       padding-right: 0;
     }
@@ -42,19 +43,19 @@
 
     .navbar-collapse {
       width: 100%;
-      border-top: 1px solid $navbar-default-border;
+      border-top: 1px solid $metro-gray;
     }
 
     .navbar-nav {
       float: none;
-      margin: 0 (-$navbar-padding-horizontal);
+      margin: 0;
 
       > li {
         float: none;
         > a {
           padding-top:    10px;
           padding-bottom: 10px;
-          border-bottom: 1px solid $navbar-default-border;
+          border-bottom: 1px solid $metro-gray;
         }
       }
     }
@@ -64,7 +65,7 @@
       margin-left: -$navbar-padding-horizontal;
       margin-right: -$navbar-padding-horizontal;
       padding: 10px $navbar-padding-horizontal;
-      border-bottom: 1px solid $navbar-default-border;
+      border-bottom: 1px solid $metro-gray;
     }
 
     .navbar-text {
@@ -87,7 +88,7 @@
         background-color: transparent;
         border: 0;
         box-shadow: none;
-        border-bottom: 1px solid $navbar-default-border;
+        border-bottom: 1px solid $metro-gray;
 
         > li > a,
         .dropdown-header {
@@ -113,10 +114,14 @@
 
       > li > a,
       .dropdown-menu > li > a {
-        &:hover, &:focus {
+        &:hover {
           background-color: $navbar-default-link-hover-bg;
           color: $navbar-default-link-hover-color;
         }
+        &:focus {
+          background-color: $metro-black;
+        }
+
       }
     }
 
@@ -175,4 +180,72 @@
       }
     }
   }
+}
+
+
+
+
+
+$bgDefault      : $metro-black;
+$bgHighlight    : $metro-sea;
+$colDefault     : $metro-light-gray;
+$colHighlight   : $white;
+$dropDown       : false;
+.navbar-default {
+  background-color: $bgDefault;
+  border-color: $bgHighlight;
+  .navbar-brand {
+    color: $colDefault;
+    &:hover, &:focus {
+      color: $colHighlight; }}
+  .navbar-text {
+    color: $colDefault; }
+  .navbar-nav {
+    > li {
+      > a {
+        color: $colDefault;
+        &:hover,  &:focus {
+          color: $colHighlight; }}
+      @if $dropDown {
+        > .dropdown-menu {
+          background-color: $bgDefault;
+          > li {
+            > a {
+              color: $colDefault;
+              &:hover,  &:focus {
+                color: $colHighlight;
+                background-color: $bgHighlight; }}
+            > .divider {
+              background-color: $bgHighlight; }}}}}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+  .navbar-toggle {
+    border-color: $bgHighlight;
+    &:hover, &:focus {
+      background-color: $bgHighlight; }
+    .icon-bar {
+      background-color: $colDefault; }}
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $colDefault; }
+  .navbar-link {
+    color: $colDefault;
+    &:hover {
+      color: $colHighlight; }}}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHighlight; }}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
 }
