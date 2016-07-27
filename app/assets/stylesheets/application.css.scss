@@ -13,6 +13,7 @@
  */
 
 @import "colors";
+$grid-float-breakpoint: 993px;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "navbar-fixed-side";
@@ -156,17 +157,14 @@ section > div.container {
 
 
 
-
 // Dynamic scaling
-@media (max-width: 767px) {
+@media (max-width: $grid-float-breakpoint) {
 	.navbar-fixed-side {
 		width: 100%;
 	}
-
 	div.content-block {
 		padding: 0px;
 	}
-
 	#message {
 		padding: 30px;
 	}
