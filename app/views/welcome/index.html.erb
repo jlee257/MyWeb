@@ -1,26 +1,83 @@
 <!-- Home section -->
 <div class="content-block content-block-home">
-  <section class="section-block section-block-home" id="home">
-    <h2>Hello World!</h2>
-    <p>This is a new app. So much to Fill!</p>
-    <p>The time is now: <%= Time.now %></p>
-    <p>Scroll Down to see navbar</p>
+  <section class="section-block" id="home">
+      <div class="container-fluid" id="home-container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 col-xs-12" id="home-container-row">
+            <div class="home-div">
+              <div id="red-div" style="height:800px; width:1000px">
+                <h1>Section 1 Section Section Section Section Section Section</h1>
+              </div>
+            </div>
+            <div class="home-div">
+              <div id="blue-div" style="height:800px; width:1000px">
+                <h1>Section 2 Section Section Section Section Section Section</h1>
+              </div>
+            </div>
+            <div class="home-div">
+              <div id="green-div" style="height:800px; width:1000px">
+                <h1>Section 3 Section Section Section Section Section Section</h1>
+              </div>
+            </div>
+            <div class="home-div">
+              <div id="orange-div" style="height:800px; width:1000px">
+                <h1>Section 4 Section Section Section Section Section Section</h1>
+              </div>
+            </div>
+            <div class="home-div home-div-last">
+              <div id="yellow-div" style="height:800px; width:1000px">
+                <h1>About Section Section Section Section Section Section</h1>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+
+      <h1 style="margin-top: 10vh" class="title-text">Ho Jeff Lee</h1>
+      <h3 style="margin-top: 0; margin-bottom: 0" class="title-text">- Online Resume -</h3>
   </section>
 </div>
 
 
 <!-- Section1 -->
-<div class="content-block">
+<div class="content-block" id="content1-block">
   <section class="section-block" id="section1">
-    <h2>Section 1</h2>
+    <!-- Section title -->
+    <h2 class="title-text">Web Applications</h2>
+    <hr class="hr-border-black">
+    <h4 class="title-text">Front-end and back-end.</h4>
+    <h4 class="title-text">From a single page website to full sized web applications.</h4>
+
+
+    <!-- Section elements -->
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-6">
-          <div style="margin: 50px; width: 300px; height: 300px" class="left-side">
+      <div class="row left-side">
+        <div class="col-md-3 col-md-offset-2 col-xs-12">
+          <div class="element-image pull-right" id="image1-0">
           </div>
         </div>
-        <div class="col-sm-6">
-          <div style="margin: 50px; width: 300px; height: 300px" class="right-side pull-right">
+        <div class="col-md-5">
+          <div>
+            <h5>Game-A-Thon of Learning</h5>
+            <h6>Some description</h6>
+            <a href="https://github.com/gatolteam/gatol#game-a-thon-of-learning" target="_blank"><img src="/images/github.png"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row right-side">
+        <div class="col-md-5 col-md-offset-2 col-xs-12">
+          <div class="pull-right">
+            <h5>GoldenGate Plating</h5>
+            <h6>Some more description here</h6>
+            <a href="https://golden-gate-jlee257.herokuapp.com/" target="_blank"><img src="/images/github.png"></a>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="element-image" id="image1-1">
           </div>
         </div>
       </div>
@@ -31,36 +88,189 @@
 
 
 <!-- Section2 -->
-<div class="content-block">
+<div class="content-block" id="content2-block">
   <section class="section-block" id="section2">
-    <h2>Section 2</h2>
+    <!-- Section title -->
+    <h2 class="title-text">Android and Windows</h2>
+    <hr class="hr-border-black">
+    <h4 class="title-text">Blah Blah Blah</h4>
+    <h4 class="title-text">Some description Blah</h4>
+
+
+
+    <!-- Section elements -->
+    <div class="container-fluid">
+      <div class="row left-side">
+        <div class="col-md-6" style="background: white">
+          <div style="margin: 50px; width: 300px; height: 300px">
+          </div>
+        </div>
+        <div class="col-md-6" style="background: black">
+          <div style="margin: 50px; width: 300px; height: 300px">
+          </div>
+        </div>
+      </div>
+
+      <div class="row right-side">
+        <div class="col-md-6">
+          <div style="margin: 50px; width: 300px; height: 300px">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div style="margin: 50px; width: 300px; height: 300px">
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </div>
 
 
 <!-- Section3 -->
-<div class="content-block">
+<div class="content-block" id="content3-block">
   <section class="section-block" id="section3">
-    <h2>Section 3</h2>
+    <h2 class="title-text">Other Projects</h2>
+
   </section>
 </div>
 
 
+<!-- Section3 -->
+<div class="content-block" id="content4-block">
+  <section class="section-block" id="section4">
+    <h2 class="title-text">Interests</h2>
+  </section>
+</div>
 
 
 <!-- Author bio -->
-<div class="content-block">
-  <section class="section-block" id="section-about">
+<div class="content-block" id="content-about-block">
+  <section class="section-block" id="section-about" style="padding-bottom: 100px">
     <div class="container">
       <div class="row">
-        <h2>About</h2>
-        <button class="btn btn-primary" id='button-leave-message'>Leave a message</button>
-        <button class="btn btn-warning btn-left-margin" id='button-review-message'>
-          Review your messsages <span class="badge" id="comment-badge"><%= @comment_count %></span>
-        </button>
+        <h2 class="title-text">About Me</h2>
+        <hr>
+
+
+        <div class="col-md-12" style="height: 3vh">
+        </div>
+
+        <div class="col-md-4 col-md-offset-2 col-xs-12" style="text-align: center; height: 100%">
+          <div id="my-picture"></div>
+        </div>
+        <div class="col-md-4 col-xs-12" style="min-height: 200px; display: flex; align-items: center">
+          <div>
+            <h4 class="text-highlight">Ho Jeff Lee</h4>
+            <p>blah blah blah description yay</p>
+            <p hidden>Hi all!! I am an undergraduate college student studying computer science in UC Berkeley. I love programming overall but my favorite part is algorithms. It's just so cool to break down complicated problems and solve them with just few sentences! Recently I also got interested in Artificial Intelligence and Machine Learning.</p>
+          </div>
+        </div>
+
+        <div class="col-md-8 col-md-offset-2 col-xs-12" style="margin-top: 10vh">
+          <h4 class="text-highlight">Education</h4>
+        </div>
+        <div class="col-md-3 col-md-offset-2 col-xs-12">
+          <h5>University of California, Berkeley</h5>
+          <h6 class="text-gray">California, USA</h6>
+        </div>
+
+        <div class="col-md-5">
+          <h5>Bachelor - Electrical Engineering and Computer Science</h5>
+          <h6>4th Year, Expected Graduation: December 2016</h6>
+          <a href="#" id="link-show-course"><h6>Show list of completed courses <span class="glyphicon glyphicon glyphicon-chevron-down" aria-hidden="true"></h6></a>
+          <div id="course-list">
+            <h6 style="margin-top: 0">Data Structures (CS61B)</h6>
+            <h6>Machine Structures (CS61C)</h6>
+            <h6>User Interface Design (CS160)</h6>
+            <h6>Software Engineering (CS169)</h6>
+            <h6>Algorithms (CS70, CS170)</h6>
+            <h6>Artificial Intelligence (CS188)</h6>
+            <h6>Systems and Signal (EE20)</h6>
+            <h6>Circuits (EE40)</h6>
+            <h6>3D Modeling, 3D Animation (UCBUGG)</h6>
+            <h6>Database Systems (CS186)</h6>
+          </div>
+        </div>
+        <div class="col-md-12" style="height: 3vh">
+        </div>
+
+
+        <div class="col-md-3 col-md-offset-2 col-xs-12">
+          <h5>Subiaco Academy</h5>
+          <h6 class="text-gray">Arkansas, USA</h6>
+        </div>
+        <div class="col-md-5">
+          <h5>Highschool</h5>
+          <h6>September 2009 - May 2011(graduated)</h6>
+        </div>
+
+        <div class="col-md-8 col-md-offset-2 col-xs-12" style="margin-top: 10vh">
+          <h4 class="text-highlight">Technical Skills</h4>
+        </div>
+
+        <div class="col-md-3 col-md-offset-2 col-xs-12">
+          <h5>Programming Languages</h5>
+        </div>
+        <div class="col-md-5">
+          <h6>Python</h6>
+          <h6>Java</h6>
+          <h6>C</h6>
+          <h6>C++</h6>
+          <h6>C#</h6>
+          <h6>Ruby</h6>
+          <h6>JavaScript</h6>
+          <h6>SQL</h6>
+        </div>
+        <div class="col-md-12" style="height: 3vh">
+        </div>
+
+        <div class="col-md-3 col-md-offset-2 col-xs-12">
+          <h5>Web Development</h5>
+        </div>
+        <div class="col-md-5">
+          <h6>HTML, CSS, Bootstrap</h6>
+          <h6>JavaScript libraries(jQuery)</h6>
+          <h6>Ruby on Rails</h6>
+        </div>
+        <div class="col-md-12" style="height: 3vh">
+        </div>
+
+        <div class="col-md-3 col-md-offset-2 col-xs-12">
+          <h5>Tools and More</h5>
+        </div>
+        <div class="col-md-5">
+          <h6>Android Studio</h6>
+          <h6>Eclipse</h6>
+          <h6>Visual Studio</h6>
+          <h6>Image Editing: Adobe Photoshop, Illustrator</h6>
+          <h6>Video Editing: Adobe Premiere</h6>
+          <h6>3D Modeling and Animation: Maya, Blender</h6>
+          <h6>GitHub</h6>
+        </div>
+
+
+
+        <div class="col-md-12" hidden>
+          <h1>h1</h1>
+          <h2>h2</h2>
+          <h3>h3</h3>
+          <h4>h4</h4>
+          <h5>h5</h5>
+          <h6>h6</h6>
+          <p>pp1</p>
+        </div>
+
+
+        <div class="col-md-12" style="text-align: center; margin-top: 10vh">
+          <button class="btn btn-primary" id='button-leave-message'>Leave a message</button>
+          <button class="btn btn-warning btn-left-margin" id='button-review-message'>
+            Show messsages <span class="badge" id="comment-badge"><%= @comment_count %></span>
+          </button>
+        </div>
 
       </div>
       <div class="panel panel-default" id="add-comment-form">
+        <div class="panel-heading">Interested in working together or just Wanna say hello. Leave a message here.</div>
         <div class="panel-body">
           <%= render :partial => '/comments/form' %>
         </div>

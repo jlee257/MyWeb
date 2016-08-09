@@ -21,33 +21,32 @@ $grid-float-breakpoint: 993px;
 
 // Mainpage wrapping elements
 div {
-	#content-body {
+	&#content-body {
 		margin: 0px;
 		padding: 0px;
-		background-color: red;
 	}
 
-	.content-block {
+	&.content-block {
 		margin: 0px;
-		background-color: $metro-orange;
 		padding: 0px 0px 0px 200px;
 	}
 
-	.content-block-home {
+	&.content-block-home {
 		margin: 0px;
 		padding: 0px;
-		background-color: $metro-light-gray;
+		color: $metro-light-gray;
+		background-color: rgba(0, 0, 0, 0.8);
 	}
 }
 
-#content-body {
-	margin: 0px;
-	padding: 0px;
-}
 
 body {
 	margin: 0px;
 	padding: 0px;
+    background-image: url('/images/berkeley_background_blur20.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 
@@ -59,31 +58,61 @@ body {
 section {
 	padding: 15px;
 	margin: 0px;
-	min-height: 500px;
+	min-height: 900px;
 }
 
 section#home {
+	padding: 0px;
 	min-height: 100vh;
-
 }
 
-section#section2 {
+#content1-block {
+	background-color: $metro-orange;
+}
+
+#image1-0 {
+	background-image: url('/images/1_0.png');
+    background-size: cover;
+}
+
+#image1-1 {
+	background-image: url('/images/1_1.png');
+    background-size: cover;
+}
+
+
+
+
+
+
+
+#content2-block {
 	background-color: $metro-sea;
 }
 
-section#section3 {
+#content3-block {
+	color: $metro-light-gray;
+	background-color: $metro-gray;
+}
+
+#content4-block {
 	background-color: $metro-light-gray;
 }
 
-
-section#section-about {
+#content-about-block {
 	min-height: 100vh;
-	background-color: $metro-light-grass;
+	color: $metro-light-gray;
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
 section > div.container {
 	margin: 0;
 	width: 100%;
+}
+
+.element-image {
+	width: 300px;
+	height: 212px; 
 }
 
 
@@ -139,6 +168,11 @@ section > div.container {
 .panel {
 	margin-top: 30px;
 	margin-bottom: 30px;
+	background-color: transparent;
+}
+.panel-heading {
+	color: $metro-light-gray !important;
+	background-color: rgba(255,255,255,0.2) !important;
 }
 .comment-username {
 	font-size: medium;
@@ -149,9 +183,106 @@ section > div.container {
 }
 
 
-.left-side, .right-side {
-	background-color: $metro-dark-orange;
+
+
+
+.container-fluid, .row {
+	padding: 0;
+	magin: 0;
 }
+#home-container-row {
+	 overflow: hidden;
+	 margin-top: 15vh;
+	 padding: 0px;
+	 height: 50vh;
+	 white-space: nowrap;
+	 font-size: 0;
+}
+
+
+
+
+#red-div {
+	background: linear-gradient(to left, red, white);
+}
+#blue-div {
+	background: linear-gradient(to left, blue, black);
+}
+#green-div {
+	background: linear-gradient(to left, green, white);
+}
+#yellow-div {
+	background: linear-gradient(to left, yellow, black);
+}
+#orange-div {
+	background: linear-gradient(to left, orange, black);
+}
+.home-div {
+	margin: 0;
+	padding: 0;
+	width: 20%;
+	overflow: hidden;
+	height: 100%;
+	display: inline-block;
+}
+.home-div-last {
+	width: 45%;
+}
+
+div.row {
+	margin: 0;
+}
+
+.left-side, .right-side {
+	margin-top: 40px !important;
+}
+
+
+
+
+
+
+
+
+.title-text {
+	text-align: center;
+}
+
+.text-highlight {
+	color: $metro-sea;
+}
+
+.text-gray {
+	color: $metro-gray;
+}
+
+hr { 
+	margin-right: 20vw;
+	margin-left: 20vw;
+
+	&.hr-border-white {
+		border-color: $metro-light-gray;
+	}
+
+	&.hr-border-black {
+		border-color: $metro-black;
+	}
+}
+
+
+
+#my-picture {
+	height: 200px;
+	width: 200px;	border-radius: 100px;
+	border-style: solid;
+    border-width: thick;
+    margin: auto;
+    border-color: $metro-sea;
+	background-image: url('/images/my_image.png');
+    background-size: cover;
+}
+
+
 
 
 

@@ -88,7 +88,7 @@ $(document).ready(function() {
   $("#comment-list-panel").hide();
   $("#add-comment-form").hide();
 
-  $( document ).ajaxComplete(function( event, xhr, settings ) {
+  $( document ).ajaxComplete(function( event, xhr, settings) {
     if ( $("#comment-badge").text() === "0" ) {
       $("#button-review-message").hide();
       $("#comment-list-panel").hide();
@@ -98,32 +98,68 @@ $(document).ready(function() {
   });
 
 
-  $(".left-side").hide();
-  $(".right-side").hide();
+  $("#course-list").hide();
+  $("#link-show-course").click(function(event) {
+    event.preventDefault();
+    var link = $(this);
+    $("#course-list").slideToggle('fast', function() {
+      if ($(this).is(':visible')) {
+        link.html('<h6>Hide list of completed courses <span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true"></h6>');                
+      } else {
+        link.html('<h6>Show list of completed courses <span class="glyphicon glyphicon glyphicon-chevron-down" aria-hidden="true"></h6>');                
+      }        
+    });
+  });
+
+
+  $(".left-side").hide().css({marginLeft : "-=150px", marginRight: "+=150px"});;
+  $(".right-side").hide().css({marginRight : "-=150px", marginLeft: "+=150px"});;
 
 
 
   $(".left-side").waypoint(function(direction) {
     if (direction == "up") {
-      $(this).fadeOut({queue: false, duration: 'slow'});
-      $(this).animate({marginLeft: "-=150px"}, 'slow');
+      $(this).fadeOut({queue: false, duration: 'fast'});
+      $(this).animate({marginLeft : "-=150px", marginRight: "+=150px"}, 'fast');
     } else {
-      $(this).fadeIn({queue: false, duration: 'slow'});
-      $(this).animate({marginLeft: "+=150px"}, 'slow');
+      $(this).fadeIn({queue: false, duration: 'fast'});
+      $(this).animate({marginRight : "-=150px", marginLeft: "+=150px"}, 'fast');
     }
-  }, {offset:'65%'});
+  }, {offset:'75%'});
 
 
 
   $(".right-side").waypoint(function(direction) {
     if (direction == "up") {
-      $(this).fadeOut({queue: false, duration: 'slow'});
-      $(this).animate({marginRight: "-=150px"}, 'slow');
+      $(this).fadeOut({queue: false, duration: 'fast'});
+      $(this).animate({marginRight : "-=150px", marginLeft: "+=150px"}, 'fast');
     } else {
-      $(this).fadeIn({queue: false, duration: 'slow'});
-      $(this).animate({marginRight: "+=150px"}, 'slow');
+      $(this).fadeIn({queue: false, duration: 'fast'});
+      $(this).animate({marginLeft : "-=150px", marginRight: "+=150px"}, 'fast');
     }
-  }, {offset:'65%'}, {triggerOnce: false});
+  }, {offset:'75%'}, {triggerOnce: false});
+
+
+
+  $(".home-div").hover(function() {
+    $(this).not(".home-div-last").animate({width: "40%"}, {queue: false, duration: 'fast'});
+    $(".home-div").not(this).not(".home-div-last").animate({width: "15%"}, {queue: false, duration: 'fast'});
+  });
+
+  $(".home-div").click(function() {
+    var childindex = $(this).index() + 1;
+    var $targetsection = $("#content-body").children().eq(childindex).find(":first-child");
+    var targetposition = $targetsection.offset().top;
+
+
+    if ($(window).width() < 768 && childindex != 0) {
+      targetposition = targetposition - 50;
+    }
+
+    $('html, body').animate({
+    scrollTop: targetposition
+    }, 700);
+  });
 });
 
 
