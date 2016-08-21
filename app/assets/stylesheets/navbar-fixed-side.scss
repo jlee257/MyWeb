@@ -10,7 +10,7 @@
 
 
   @media (min-width: $grid-float-breakpoint) {
-    $navbar-default-link-hover-bg: lighten($metro-black, 5%);
+    $navbar-default-link-hover-bg: lighten($color-gray-dark, 5%);
     $navbar-inverse-link-hover-bg: lighten($navbar-inverse-bg, 5%);
     $navbar-inverse-border: lighten($navbar-inverse-bg, 8%);
 
@@ -45,7 +45,7 @@
 
     .navbar-collapse {
       width: 100%;
-      border-top: 1px solid $metro-gray;
+      border-top: 1px solid $color-gray-medium-dark;
     }
 
     .navbar-nav {
@@ -57,7 +57,7 @@
         > a {
           padding-top:    10px;
           padding-bottom: 10px;
-          border-bottom: 1px solid $metro-gray;
+          border-bottom: 1px solid $color-gray-medium-dark;
         }
       }
     }
@@ -67,7 +67,7 @@
       margin-left: -$navbar-padding-horizontal;
       margin-right: -$navbar-padding-horizontal;
       padding: 10px $navbar-padding-horizontal;
-      border-bottom: 1px solid $metro-gray;
+      border-bottom: 1px solid $color-gray-medium-dark;
     }
 
     .navbar-text {
@@ -90,7 +90,7 @@
         background-color: transparent;
         border: 0;
         box-shadow: none;
-        border-bottom: 1px solid $metro-gray;
+        border-bottom: 1px solid $color-gray-medium-dark;
 
         > li > a,
         .dropdown-header {
@@ -121,7 +121,7 @@
           color: $navbar-default-link-hover-color;
         }
         &:focus {
-          background-color: $metro-black;
+          background-color: $color-gray-dark;
         }
 
       }
@@ -188,9 +188,9 @@
 
 
 
-$bgDefault      : $metro-black;
-$bgHighlight    : $metro-sea;
-$colDefault     : $metro-light-gray;
+$bgDefault      : $color-gray-dark;
+$bgHighlight    : $color-primary-3;
+$colDefault     : $color-gray-medium-light;
 $colHighlight   : $white;
 $dropDown       : false;
 .navbar-default {

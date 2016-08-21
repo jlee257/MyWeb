@@ -1,44 +1,106 @@
 <!-- Home section -->
 <div class="content-block content-block-home">
   <section class="section-block" id="home">
-      <div class="container-fluid" id="home-container">
-        <div class="row">
-          <div class="col-md-10 col-md-offset-1 col-xs-12" id="home-container-row">
-            <div class="home-div">
-              <div id="red-div" style="height:800px; width:1000px">
-                <h1>Section 1 Section Section Section Section Section Section</h1>
-              </div>
-            </div>
-            <div class="home-div">
-              <div id="blue-div" style="height:800px; width:1000px">
-                <h1>Section 2 Section Section Section Section Section Section</h1>
-              </div>
-            </div>
-            <div class="home-div">
-              <div id="green-div" style="height:800px; width:1000px">
-                <h1>Section 3 Section Section Section Section Section Section</h1>
-              </div>
-            </div>
-            <div class="home-div">
-              <div id="orange-div" style="height:800px; width:1000px">
-                <h1>Section 4 Section Section Section Section Section Section</h1>
-              </div>
-            </div>
-            <div class="home-div home-div-last">
-              <div id="yellow-div" style="height:800px; width:1000px">
-                <h1>About Section Section Section Section Section Section</h1>
-              </div>
-            </div>
-            
-          </div>
+    <div id="home-slider">
+
+      <div class="slider-element-container-first">
+        <div class="slider-element-background slider-element-first">
+          <h1>Ho Jeff Lee</h1>
+          <h2>Online Resume</h2>
         </div>
       </div>
 
+      <div class="slider-element-container">
+        <div class="slider-element-background slider-background-primary">
 
-      <h1 style="margin-top: 10vh" class="title-text">Ho Jeff Lee</h1>
-      <h3 style="margin-top: 0; margin-bottom: 0" class="title-text">- Online Resume -</h3>
+          <div class="slider-element-title">
+            <h1>Web Applications</h1>
+          </div>
+
+          <div class="slider-element-text slider-element-description">
+            <h4>Front-end and back-end.</h4>
+            <h4>From a single page website</h4>
+            <h4>    to full sized web applications</h4>
+          </div>
+
+          <div class="slider-element-image slider-element-description" id="symbol-0"></div>
+
+        </div>
+      </div>
+
+      <div class="slider-element-container">
+        <div class="slider-element-background slider-background-complement">
+
+          <div class="slider-element-title">
+            <h1>Android and Windows</h1>
+          </div>
+
+          <div class="slider-element-text slider-element-description">
+            <h4>Applications for smartphones,</h4>
+            <h4>    smartwatches, and PC</h4>
+          </div>
+
+          <div class="slider-element-image slider-element-description" id="symbol-1"></div>
+
+        </div>
+      </div>
+
+      <div class="slider-element-container">
+        <div class="slider-element-background slider-background-primary">
+
+          <div class="slider-element-title">
+            <h1>Other Projects</h1>
+          </div>
+
+          <div class="slider-element-text slider-element-description">
+            <h4>Other personal and school works</h4>
+          </div>
+
+          <div class="slider-element-image slider-element-description" id="symbol-2"></div>
+
+        </div>
+      </div>
+
+      <div class="slider-element-container">
+        <div class="slider-element-background slider-background-complement">
+          <div class="slider-element-title">
+            <h1>Interests</h1>
+          </div>
+
+          <div class="slider-element-text slider-element-description">
+            <h4>Learn how I spend my free time</h4>
+          </div>
+
+          <div class="slider-element-image slider-element-description" id="symbol-3"></div>
+
+        </div>
+      </div>
+
+      <div class="slider-element-container slider-element-container-last slider-background-primary">
+        <div class="slider-element-background" id="yellow-div">
+          <div class="slider-element-title">
+            <h1>About Me</h1>
+          </div>
+
+          <div class="slider-element-text slider-element-description">
+            <h4>More details about me</h4>
+          </div>
+
+          <div class="slider-element-image slider-element-description" id="symbol-4"></div>
+
+        </div>
+      </div> 
+    </div>
+
+
   </section>
 </div>
+
+
+
+
+
+
 
 
 <!-- Section1 -->
@@ -46,43 +108,122 @@
   <section class="section-block" id="section1">
     <!-- Section title -->
     <h2 class="title-text">Web Applications</h2>
-    <hr class="hr-border-black">
+    <hr class="hr-long hr-border-primary">
     <h4 class="title-text">Front-end and back-end.</h4>
     <h4 class="title-text">From a single page website to full sized web applications.</h4>
 
-
     <!-- Section elements -->
     <div class="container-fluid">
+
+      <!-- element 1-0 -->
       <div class="row left-side">
         <div class="col-md-3 col-md-offset-2 col-xs-12">
-          <div class="element-image pull-right" id="image1-0">
+          <div class="pull-right">
+            <div class="element-image team-project" id="image1-0">
+            </div>
           </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 col-xs-12">
           <div>
             <h5>Game-A-Thon of Learning</h5>
-            <h6>Some description</h6>
-            <a href="https://github.com/gatolteam/gatol#game-a-thon-of-learning" target="_blank"><img src="/images/github.png"></a>
+            <hr class="hr-short hr-border-primary">
+            <h6>A web application that supplies interactive method of learning through engaging and rewarding gameplay.</h6>
+            <ul class="desc-list">
+              <li>Written with Ruby on Rails</li>
+              <li>Model-View-Controller architecture</li>
+              <li>My works was mainly about building back-end features such as serverside api, user authentication, and data validation</li>
+              <li>Games based on 2D JavaScript physics engine</li>
+            </ul>
+
+            <a class="ext-link" href="https://github.com/gatolteam/gatol#game-a-thon-of-learning" target="_blank">
+              <div class="ext-link-github">  
+                <h6><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Go to GitHub</h6>
+              </div>
+            </a>
+
+            <a class="ext-link" href="https://github.com/gatolteam/gatol#game-a-thon-of-learning" target="_blank">
+              <div class="ext-link-website">  
+                <h6><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Visit Website</h6>
+              </div>
+            </a>
+
           </div>
         </div>
       </div>
 
+      <!-- element 1-1 -->
       <div class="row right-side">
         <div class="col-md-5 col-md-offset-2 col-xs-12">
           <div class="pull-right">
-            <h5>GoldenGate Plating</h5>
-            <h6>Some more description here</h6>
-            <a href="https://golden-gate-jlee257.herokuapp.com/" target="_blank"><img src="/images/github.png"></a>
+            <div>
+              <h5>GoldenGate Plating</h5>
+              <hr class="hr-short hr-border-primary">
+              <h6>Personal project to practice front-end development and Bootstrap features</h6>
+              <ul class="desc-list">
+                <li>Rubyon Rails</li>
+                <li>Bootstrap</li>
+              </ul>
+
+              <a class="ext-link" href="https://github.com/gatolteam/gatol#game-a-thon-of-learning" target="_blank">
+                <div class="ext-link-github">  
+                  <h6><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Go to GitHub</h6>
+                </div>
+              </a>
+
+              <a class="ext-link" href="https://github.com/gatolteam/gatol#game-a-thon-of-learning" target="_blank">
+                <div class="ext-link-website">  
+                  <h6><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Visit Website</h6>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
 
-        <div class="col-md-3">
-          <div class="element-image" id="image1-1">
+        <div class="col-md-3 col-xs-12">
+          <div>
+            <div class="element-image personal-project" id="image1-1">
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
+      <!-- element 1-2 -->
+      <div class="row left-side">
+        <div class="col-md-3 col-md-offset-2 col-xs-12">
+          <div class="pull-right">
+            <div class="element-image personal-project" id="image1-2">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 col-xs-12">
+          <div>
+            <h5>MyWeb</h5>
+            <hr class="hr-short hr-border-primary">
+            <h6>Interactive personal homepage. This website :)</h6>
+            <ul class="desc-list">
+              <li>Rubyon Rails and Bootstrap</li>
+              <li>Animations with Javascript and jQuery</li>
+            </ul>
+
+
+            <a class="ext-link" href="https://github.com/gatolteam/gatol#game-a-thon-of-learning" target="_blank">
+              <div class="ext-link-github">  
+                <h6><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Go to GitHub</h6>
+              </div>
+            </a>
+
+            <a class="ext-link" href="https://github.com/gatolteam/gatol#game-a-thon-of-learning" target="_blank">
+              <div class="ext-link-website">  
+                <h6><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Visit Website</h6>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
   </section>
 </div>
 
@@ -92,35 +233,128 @@
   <section class="section-block" id="section2">
     <!-- Section title -->
     <h2 class="title-text">Android and Windows</h2>
-    <hr class="hr-border-black">
-    <h4 class="title-text">Blah Blah Blah</h4>
-    <h4 class="title-text">Some description Blah</h4>
-
+    <hr class="hr-long hr-border-white">
+    <h4 class="title-text">Applications for phones, wearable devices, and computers.</h4>
 
 
     <!-- Section elements -->
     <div class="container-fluid">
+
+      <!-- element 2-0 -->
       <div class="row left-side">
-        <div class="col-md-6" style="background: white">
-          <div style="margin: 50px; width: 300px; height: 300px">
+        <div class="col-md-3 col-md-offset-2 col-xs-12">
+          <div class="pull-right">
+            <div class="element-image personal-project" id="image2-0">
+            </div>
           </div>
         </div>
-        <div class="col-md-6" style="background: black">
-          <div style="margin: 50px; width: 300px; height: 300px">
+        <div class="col-md-5 col-xs-12">
+          <div>
+            <h5>CRUNCH TIME</h5>
+            <hr class="hr-short hr-border-white">
+            <h6>An Android mobile application that quickly converts calories to amount of exercises needed</h6>
+
+            <ul class="desc-list">
+              <li>Java program that built with Android Studio</li>
+              <li>Allows conversions between exercises</li>
+            </ul>
+
+
+            <a class="ext-link" href="https://github.com/gatolteam/gatol#game-a-thon-of-learning" target="_blank">
+              <div class="ext-link-github">  
+                <h6><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Go to GitHub</h6>
+              </div>
+            </a>
+
           </div>
         </div>
       </div>
 
+      <!-- element 2-1 -->
       <div class="row right-side">
-        <div class="col-md-6">
-          <div style="margin: 50px; width: 300px; height: 300px">
+        <div class="col-md-5 col-md-offset-2 col-xs-12">
+          <div class="pull-right">
+            <div>
+              <h5>BRUSH!</h5>
+              <hr class="hr-short hr-border-white">
+              <h6>Smartwatch and smartphone application designed to be help and motivate children to brush their teeth</h6>
+
+              <ul class="desc-list">
+                <li>UMoto360 as the base wearable device</li>
+                <li>Used accelerometer to detect hand motion of the wearer and collect information</li>
+                <li>Data is managed and displayed on the phone</li>
+                <li>Most of the watch application is done by me including front-end displays of the watch, sensor readings, 2D picker, and timer.</li>
+              </ul>
+
+
+              <a class="ext-link" href="https://github.com/gatolteam/gatol#game-a-thon-of-learning" target="_blank">
+                <div class="ext-link-github">  
+                  <h6><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Go to GitHub</h6>
+                </div>
+              </a>
+
+              <a class="ext-link" href="https://github.com/gatolteam/gatol#game-a-thon-of-learning" target="_blank">
+                <div class="ext-link-detail">  
+                  <h6><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> View Details</h6>
+                </div>
+              </a>
+
+              <a class="ext-link" href="https://github.com/gatolteam/gatol#game-a-thon-of-learning" target="_blank">
+                <div class="ext-link-youtube">  
+                  <h6><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Watch YouTube</h6>
+                </div>
+              </a>
+
+
+
+            </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div style="margin: 50px; width: 300px; height: 300px">
+
+        <div class="col-md-3 col-xs-12">
+          <div>
+            <div class="element-image team-project" id="image2-1">
+            </div>
           </div>
         </div>
       </div>
+
+
+      <!-- element 2-2 -->
+      <div class="row left-side">
+        <div class="col-md-3 col-md-offset-2 col-xs-12">
+          <div class="pull-right">
+            <div class="element-image personal-project" id="image2-2">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 col-xs-12">
+          <div>
+            <h5>SimpleTagManager</h5>
+            <hr class="hr-short hr-border-white">
+            <h6>A program for Windows10 useres that allow users to add tags to any file or folder</h6>
+
+            <ul class="desc-list">
+              <li>A Visual Studio application</li>
+              <li>Uses internal database and SQL to store and read tags</li>
+              <li>Most of the File Explorer features such as cut, copy, paste, and delete</li>
+              <li>Breadth first search algorithm with lazy loading to display files and folders</li>
+            </ul>
+
+
+            <a class="ext-link" href="https://github.com/gatolteam/gatol#game-a-thon-of-learning" target="_blank">
+              <div class="ext-link-github">  
+                <h6><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Go to GitHub</h6>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
     </div>
   </section>
 </div>
@@ -130,15 +364,174 @@
 <div class="content-block" id="content3-block">
   <section class="section-block" id="section3">
     <h2 class="title-text">Other Projects</h2>
+    <hr class="hr-long hr-border-primary">
+    <h4 class="title-text">Blah Blah Blah</h4>
+    <h4 class="title-text">Some description Blah</h4>
 
+    <!-- Section elements -->
+    <div class="container-fluid">
+
+      <!-- element 3-0 -->
+      <div class="row left-side">
+        <div class="col-md-3 col-md-offset-2 col-xs-12">
+          <div class="pull-right">
+            <div class="element-image course-work" id="image3-0">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 col-xs-12">
+          <div>
+            <h5>AI Pacman</h5>
+            <hr class="hr-short hr-border-primary">
+            <h6>An artificial intelligence that search solutions in different multi-agent Pac-man problem variations.</h6>
+
+            <ul class="desc-list">
+              <li>Implemented search algorithms including depth-first-search, breadth-first-search, A*, iterative deepening, minimax and logical planning to find optimal solutions to survive and win in different environments</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- element 3-1 -->
+      <div class="row right-side">
+        <div class="col-md-5 col-md-offset-2 col-xs-12">
+          <div class="pull-right">
+            <div>
+              <h5>Crawler</h5>
+              <hr class="hr-short hr-border-primary">
+              <h6>An artificial intelligence program that teaches itself how to crawl</h6>
+              <ul class="desc-list">
+                <li>Implemented search algorithms including depth-first-search, breadth-first-search, A*, iterative deepening, minimax and logical planning to find optimal solutions to survive and win in different environments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-xs-12">
+          <div>
+            <div class="element-image course-work" id="image3-1">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </section>
 </div>
 
 
-<!-- Section3 -->
+<!-- Section4 -->
 <div class="content-block" id="content4-block">
   <section class="section-block" id="section4">
+    <!-- Section title -->
     <h2 class="title-text">Interests</h2>
+    <hr class="hr-long hr-border-white">
+    <h4 class="title-text">Playing games is fun.</h4>
+    <h4 class="title-text">But sometimes, building and modifying one is even more fun.</h4>
+
+
+    <!-- Section elements -->
+    <div class="container-fluid">
+
+
+      <!-- element 4-0 -->
+      <div class="row left-side">
+        <div class="col-md-3 col-md-offset-2 col-xs-12">
+          <div class="pull-right">
+            <div class="element-image personal-project" id="image4-0">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 col-xs-12">
+          <div>
+            <h5>Blink Dagger from Dota2 for The Elder Scrolls V: Skyrim</h5>
+            <hr class="hr-short hr-border-white">
+            <h6>An item from a very popular game called Dota2 remastered in another historic game, Skyrim.</h6>
+
+            <ul class="desc-list">
+              <li>3D dagger fully remodelled and textured using Blender</li>
+              <li>Teleportation scripts using Papyrus, a scripting system for Bethesda games</li>
+              <li>Also features Visual and Sound FX</li>
+            </ul>
+
+            <a class="ext-link" href="https://github.com/gatolteam/gatol#game-a-thon-of-learning" target="_blank">
+              <div class="ext-link-detail">  
+                <h6><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> View Details</h6>
+              </div>
+            </a>
+
+            <a class="ext-link" href="https://github.com/gatolteam/gatol#game-a-thon-of-learning" target="_blank">
+              <div class="ext-link-youtube">  
+                <h6><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Watch YouTube</h6>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- element 4-1 -->
+      <div class="row right-side">
+        <div class="col-md-5 col-md-offset-2 col-xs-12">
+          <div class="pull-right">
+            <div>
+              <h5>Divine Rapier from Dota2 for The Elder Scrolls V: Skyrim</h5>
+              <hr class="hr-short hr-border-white">
+              <h6>More from Dota2</h6>
+
+              <ul class="desc-list">
+                <li>3D modelled in Blender</li>
+                <li>Scripts using Papyrus</li>
+              </ul>
+
+              <a class="ext-link" href="https://github.com/gatolteam/gatol#game-a-thon-of-learning" target="_blank">
+                <div class="ext-link-detail">  
+                  <h6><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> View Details</h6>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-xs-12">
+          <div>
+            <div class="element-image personal-project" id="image4-1">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- element 4-2 -->
+      <div class="row left-side">
+        <div class="col-md-3 col-md-offset-2 col-xs-12">
+          <div class="pull-right">
+            <div class="element-image team-project" id="image4-2">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 col-xs-12">
+          <div>
+            <h5>So Fly</h5>
+            <hr class="hr-short hr-border-white">
+            <h6>A 3D animation starring two frogs and one fly.</h6>
+
+            <ul class="desc-list">
+              <li>Modelled and animated using Maya</li>
+              <li>My work focused on texturing, and weight painting</li>
+            </ul>
+
+            <a class="ext-link" href="https://github.com/gatolteam/gatol#game-a-thon-of-learning" target="_blank">
+              <div class="ext-link-youtube">  
+                <h6><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Watch YouTube</h6>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
   </section>
 </div>
 
@@ -149,7 +542,7 @@
     <div class="container">
       <div class="row">
         <h2 class="title-text">About Me</h2>
-        <hr>
+        <hr class="hr-long hr-border-white">
 
 
         <div class="col-md-12" style="height: 3vh">
@@ -161,8 +554,10 @@
         <div class="col-md-4 col-xs-12" style="min-height: 200px; display: flex; align-items: center">
           <div>
             <h4 class="text-highlight">Ho Jeff Lee</h4>
-            <p>blah blah blah description yay</p>
-            <p hidden>Hi all!! I am an undergraduate college student studying computer science in UC Berkeley. I love programming overall but my favorite part is algorithms. It's just so cool to break down complicated problems and solve them with just few sentences! Recently I also got interested in Artificial Intelligence and Machine Learning.</p>
+            <p>Hi all!! I am an undergraduate college student studying computer science in UC Berkeley. I love programming overall but my favorite part is algorithms. It's just so cool to break down complicated problems and solve them with just few sentences! Recently I also got interested in Artificial Intelligence and Machine Learning.</p>
+            <p hidden>
+              When I was a highschooler, I enjoyed playing games on my PC but saddly good old Warcraft III was pretty much the only game my PC could run. But I really enjoyed it and I liked building custom maps for the game. Then, I realized that I was spending more time on building the maps then actually playing the game... Dictating, and controlling the whole map was just so much fun and thats how I started programming.
+            </p>
           </div>
         </div>
 
@@ -214,12 +609,12 @@
         <div class="col-md-5">
           <h6>Python</h6>
           <h6>Java</h6>
+          <h6>SQL</h6>
           <h6>C</h6>
           <h6>C++</h6>
           <h6>C#</h6>
           <h6>Ruby</h6>
           <h6>JavaScript</h6>
-          <h6>SQL</h6>
         </div>
         <div class="col-md-12" style="height: 3vh">
         </div>
@@ -228,7 +623,8 @@
           <h5>Web Development</h5>
         </div>
         <div class="col-md-5">
-          <h6>HTML, CSS, Bootstrap</h6>
+          <h6>HTML, CSS</h6>
+          <h6>Bootstrap</h6>
           <h6>JavaScript libraries(jQuery)</h6>
           <h6>Ruby on Rails</h6>
         </div>

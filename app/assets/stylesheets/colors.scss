@@ -33,14 +33,69 @@ $gray-font: #aaaaaa;
 
 
 
+//New Colors
+$turquoise-1: #46b2b2;
+$turquoise-2: #249f9f;
+$turquoise-3: #009999;
+$turquoise-4: #007676;
+$turquoise-5: #005d5d;
+$turquoise-opaque: rgba(70, 178, 178, 0.8);
+
+$orange-1: #ffaa63;
+$orange-2: #ff9339;
+$orange-3: #ff7400;
+$orange-4: #c55900;
+$orange-5: #9b4600;
+$orange-opaque: rgba(255, 170, 99, 0.8);
+
+//Gray Scale
+$turquoise-light: #ced6d6;
+$turquoise-medium-light: #777f7f;
+$turquoise-medium-dark: #343838;
+$turquoise-dark: #151818;
+
+
+//Assignment
+$color-primary-1:			$turquoise-1;
+$color-primary-2:			$turquoise-2;
+$color-primary-3:			$turquoise-3;
+$color-primary-4:			$turquoise-4;
+$color-primary-5:			$turquoise-5;
+
+$color-complement-1:		$orange-1;
+$color-complement-2:		$orange-2;
+$color-complement-3:		$orange-3;
+$color-complement-4:		$orange-4;
+$color-complement-5:		$orange-5;
+
+$color-white:				#ffffff;
+$color-gray-light:			$turquoise-light;
+$color-gray-medium-light:	$turquoise-medium-light;
+$color-gray-medium-dark:	$turquoise-medium-dark;
+$color-gray-dark:			$turquoise-dark;
+$color-black:				#000000;
+
+$color-primary-opaque:		$turquoise-opaque;
+$color-complement-opaque:	$orange-opaque;
+
+
+
+
+
+
+
+
+
+
+
 
 //bootstrap color fixes;
-$btn-primary-bg: $metro-sea !default;
-$btn-primary-border: transparent !default;
-$btn-warning-bg: $metro-orange !default;
-$btn-warning-border: transparent !default;
+$btn-primary-bg: 		$color-primary-3 !default;
+$btn-primary-border: 	transparent !default;
+$btn-warning-bg: 		$color-complement-3 !default;
+$btn-warning-border: 	transparent !default;
 
 
-$brand-primary:         $metro-sea !default;
-$brand-success:         $metro-grass !default;
-$brand-warning:         $metro-orange !default;
+$brand-primary:         $color-primary-3 !default;
+$brand-success:         $color-primary-3 !default;
+$brand-warning:         $color-complement-3 !default;
