@@ -16,7 +16,6 @@
 $grid-float-breakpoint: 993px;
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "navbar-fixed-side";
 @import 'https://fonts.googleapis.com/css?family=Josefin+Sans';
 
 
@@ -29,7 +28,7 @@ div {
 
 	&.content-block {
 		margin: 0px;
-		padding: 0px 0px 0px 200px;
+		padding: 0px;
 	}
 
 	&.content-block-home {
@@ -220,22 +219,28 @@ section > div.container {
 
 
 
-// Bootstrap Navbar
-.navbar-fixed-side {
-	width: 200px;
-	margin: 0px;
-}
+// Custom Navigation Bar
+nav {
+	position: fixed;
+	top: 30px;
+	left: 30px;
+	z-index: 100;
 
-.btn-primary:focus {
-	background-color: $btn-primary-bg;
-	border-color: $btn-primary-border;
-}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
 
-.btn-warning:focus {
-	background-color: $btn-warning-bg;
-	border-color: $btn-warning-border;
+		li {
+			display: flex;
+			align-items: center;
+			padding: 20px;
+			width: 300px;
+			height: 70px;
+			background-color: $color-black;
+		}
+	}
 }
-
 
 
 
@@ -256,6 +261,16 @@ section > div.container {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
+}
+
+.btn-primary:focus {
+	background-color: $btn-primary-bg;
+	border-color: $btn-primary-border;
+}
+
+.btn-warning:focus {
+	background-color: $btn-warning-bg;
+	border-color: $btn-warning-border;
 }
 
 
@@ -465,12 +480,6 @@ hr {
 
 // Dynamic scaling
 @media (max-width: $grid-float-breakpoint) {
-	.navbar-fixed-side {
-		width: 100%;
-	}
-	div.content-block {
-		padding: 0px;
-	}
 	#message {
 		padding: 30px;
 	}

@@ -46,11 +46,6 @@ $(document).ready(function() {
     var $targetsection = $("#content-body").children().eq(childindex).find(":first-child");
     var targetposition = $targetsection.offset().top;
 
-
-    if ($(window).width() < 768 && childindex != 0) {
-      targetposition = targetposition - 50;
-    }
-
     $('html, body').animate({
     scrollTop: targetposition
     }, 300);
