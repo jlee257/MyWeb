@@ -13,7 +13,6 @@
  */
 
 @import "colors";
-$grid-float-breakpoint: 993px;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import 'https://fonts.googleapis.com/css?family=Josefin+Sans';
@@ -70,6 +69,13 @@ section#home {
 #content1-block {
 	color: $color-primary-5;
 	background-color: $color-complement-1;
+}
+
+.section-element-container {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	overflow: hidden;
 }
 
 
@@ -232,12 +238,44 @@ nav {
 		list-style: none;
 
 		li {
-			display: flex;
-			align-items: center;
-			padding: 20px;
-			width: 300px;
-			height: 70px;
-			background-color: $color-black;
+			// border-style: solid;
+			// border-width: 0 0 1px 0;
+			// border-color: $color-gray-medium-dark;
+
+			a {
+				display: block;
+				background-color: $color-black;
+				padding-left: 20px;
+				color: $color-gray-medium-light;
+				width: 60px;
+				height: 60px;
+
+				h3 {
+					display: none;
+					font-family: 'Josefin Sans', sans-serif !important;
+				}
+			}
+
+			a:hover, a:focus {
+				text-decoration: none;
+				color: $color-white;
+			}
+		}
+
+		li.active > a {
+				background-color: $color-primary-3;
+				color: $color-white;
+		}
+	}
+}
+
+nav:hover > ul > li, nav.active > ul > li {
+
+	a {
+		width: 280px;
+
+		h3 {
+			display: inline-block;
 		}
 	}
 }
@@ -482,6 +520,14 @@ hr {
 @media (max-width: $grid-float-breakpoint) {
 	#message {
 		padding: 30px;
+	}
+
+	nav {
+		display: none !important;
+	}
+
+	.slider-element-container {
+		display: none !important;
 	}
 }
 
