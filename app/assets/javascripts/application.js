@@ -107,9 +107,9 @@ $(document).ready(function() {
     var link = $(this);
     $("#course-list").slideToggle('fast', function() {
       if ($(this).is(':visible')) {
-        link.html('<h6>Hide list of completed courses <span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true"></h6>');                
+        link.html('Hide list of completed courses <span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true">');                
       } else {
-        link.html('<h6>Show list of completed courses <span class="glyphicon glyphicon glyphicon-chevron-down" aria-hidden="true"></h6>');                
+        link.html('Show list of completed courses <span class="glyphicon glyphicon glyphicon-chevron-down" aria-hidden="true">');                
       }        
     });
   });
@@ -143,9 +143,9 @@ $(document).ready(function() {
 
   $(".hr-long").waypoint(function(direction) {
     if (direction == "up") {
-      $(this).animate({width: "5vh"}, 'medium');
+      $(this).animate({width: "5%"}, 'medium');
     } else {
-      $(this).animate({width: "60vh"}, 'medium');
+      $(this).animate({width: "60%"}, 'medium');
     }
   }, {offset:'75%'}, {triggerOnce: true});
 

@@ -13,6 +13,7 @@
  */
 
 @import "colors";
+$grid-float-breakpoint: 993px;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import 'https://fonts.googleapis.com/css?family=Josefin+Sans';
@@ -55,8 +56,8 @@ body {
 
 // Mainpage section blocks
 section {
-	padding-top: 60px;
-	padding-bottom: 120px;
+	padding-top: 100px;
+	padding-bottom: 160px;
 	margin: 0px;
 	min-height: 900px;
 }
@@ -82,8 +83,8 @@ section#home {
 
 // element images
 .element-image {
-	width: 300px;
-	height: 212px;
+	width: 100%;
+	height: auto;
     background-size: cover;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -114,55 +115,43 @@ section#home {
 }
 
 
-#image1-0 {
-	background-image: url('/images/1_0.png');
-}
-#image1-1 {
-	background-image: url('/images/1_1.png');
-}
-#image1-2 {
-	background-image: url('/images/1_2.png');
-}
-#image2-0 {
-	background-image: url('/images/2_0.png');
-}
-#image2-1 {
-	background-image: url('/images/2_1.png');
-}
-#image2-2 {
-	background-image: url('/images/2_2.png');
-}
-#image3-0 {
-	background-image: url('/images/3_0.png');
-}
-#image3-1 {
-	background-image: url('/images/3_1.png');
-}
-#image4-0 {
-	background-image: url('/images/4_0.png');
-}
-#image4-1 {
-	background-image: url('/images/4_1.png');
-}
-#image4-2 {
-	background-image: url('/images/4_2.png');
-}
-
-
 
 
 // element links
 .ext-link {
-	display: inline-block;
+
+	display: block;
 	color: $color-white;
-	div {
-		width: 8.5em;
-		padding: 2px;
-		margin-bottom: 5px;
-		h6 {
-			margin: 3px 5px;
-		}
+	width: 10em;
+	padding-left: 5px;
+	margin-bottom: 5px;
+
+	&.ext-link-github {
+		background-color: $color-black;
 	}
+
+	&.ext-link-website {
+		background-color: $color-primary-4;
+	}
+
+	&.ext-link-detail {
+		background-color: $color-complement-4;
+	}
+
+	&.ext-link-youtube {
+		background-color: #e52d27;
+	}
+
+	// display: inline-block;
+	// color: $color-white;
+	// div {
+	// 	width: 10em;
+	// 	padding: 2px;
+	// 	margin-bottom: 5px;
+	// 	h6 {
+	// 		margin: 3px 5px;
+	// 	}
+	// }
 	.ext-link-github {
 		background-color: $color-black;
 	}
@@ -178,8 +167,7 @@ section#home {
 }
 
 #link-show-course {
-	display: inline-block;
-	h6 {
+	p {
 		margin-top: 0;
 	}
 }
@@ -238,9 +226,7 @@ nav {
 		list-style: none;
 
 		li {
-			// border-style: solid;
-			// border-width: 0 0 1px 0;
-			// border-color: $color-gray-medium-dark;
+			margin-bottom: 5px;
 
 			a {
 				display: block;
@@ -311,6 +297,11 @@ nav:hover > ul > li, nav.active > ul > li {
 	border-color: $btn-warning-border;
 }
 
+p {
+	margin: 3px;
+}
+
+
 
 
 
@@ -351,48 +342,55 @@ nav:hover > ul > li, nav.active > ul > li {
 	 height: 100%;
 	 white-space: nowrap;
 	 font-size: 0;
-}
 
-.slider-background-primary {
-	background-color: $color-primary-3;
-	// background: linear-gradient(to right, $color-primary-4, $color-primary-3 20%);
-}
-.slider-background-complement {
-	background-color: $color-complement-3;
-	// background: linear-gradient(to right, $color-complement-4, $color-complement-3 20%);
-}
 
-.slider-element-container-first {
-	margin: 0;
-	padding: 0;
-	width: 50%;
-	overflow: hidden;
-	height: 100%;
-	display: inline-block;
-	transform: none;
+	.slider-element-container-first {
+		margin: 0;
+		padding: 0;
+		width: 50%;
+		overflow: hidden;
+		height: 100%;
+		display: inline-block;
+		transform: none;
 
-	h1 {
-		margin-top: 7vh;
-		margin-left: 7vw;
+		h1 {
+			margin-top: 7vh;
+			margin-left: 7vw;
+		}
+
+		h2 {
+			margin-left: 7vw;
+		}
 	}
-	h2 {
-		margin-left: 7vw;
+
+	.slider-element-container {
+		margin: 0;
+		padding: 0;
+		width: 10%;
+		overflow: hidden;
+		height: 100%;
+		display: inline-block;
+		transform: skewX(160deg);
+
+		h1 {
+			font-size: 50px;
+		}
 	}
+
+	.slider-element-container-last {
+		width: 50%;
+	}
+
+
+	.slider-background-primary {
+		background-color: $color-primary-3;
+	}
+	.slider-background-complement {
+		background-color: $color-complement-3;
+	}
+
 }
 
-.slider-element-container {
-	margin: 0;
-	padding: 0;
-	width: 10%;
-	overflow: hidden;
-	height: 100%;
-	display: inline-block;
-	transform: skewX(160deg);
-}
-
-.slider-element-container-last {
-	width: 50%;
-}
 
 .slider-element-background {
 	padding: 30px;
@@ -476,7 +474,7 @@ div.row {
 
 hr {
 	&.hr-long { 
-		width: 60vw;
+		width: 60%;
 		height: 2px;
 		border: none;
 	}
