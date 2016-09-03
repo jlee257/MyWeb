@@ -107,9 +107,9 @@ $(document).ready(function() {
     var link = $(this);
     $("#course-list").slideToggle('fast', function() {
       if ($(this).is(':visible')) {
-        link.html('Hide list of completed courses <span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true">');                
+        link.html('Hide list of courses <span class="glyphicon glyphicon glyphicon-chevron-up" aria-hidden="true">');                
       } else {
-        link.html('Show list of completed courses <span class="glyphicon glyphicon glyphicon-chevron-down" aria-hidden="true">');                
+        link.html('Show list of courses <span class="glyphicon glyphicon glyphicon-chevron-down" aria-hidden="true">');                
       }        
     });
   });

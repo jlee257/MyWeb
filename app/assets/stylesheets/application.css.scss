@@ -58,19 +58,18 @@ body {
 section {
 	padding-top: 100px;
 	padding-bottom: 160px;
-	margin: 0px;
+	margin: 0 auto 0 auto;
 	min-height: 900px;
+	max-width: 1400px;
 }
 
 section#home {
 	padding: 0px;
+	margin: 0;
 	min-height: 100vh;
+	max-width: none;
 }
 
-#content1-block {
-	color: $color-primary-5;
-	background-color: $color-complement-1;
-}
 
 .section-element-container {
 	margin: 0;
@@ -142,16 +141,6 @@ section#home {
 		background-color: #e52d27;
 	}
 
-	// display: inline-block;
-	// color: $color-white;
-	// div {
-	// 	width: 10em;
-	// 	padding: 2px;
-	// 	margin-bottom: 5px;
-	// 	h6 {
-	// 		margin: 3px 5px;
-	// 	}
-	// }
 	.ext-link-github {
 		background-color: $color-black;
 	}
@@ -174,8 +163,15 @@ section#home {
 
 
 
+#content1-block {
+	color: $color-gray-medium-light;
+	background-color: $color-white;
 
-
+	h1, div > h4 {
+		color: $color-primary-5;
+		font-weight: bold;
+	}
+}
 
 #content2-block {
 	color: $color-white;
@@ -183,9 +179,13 @@ section#home {
 }
 
 #content3-block {
-	// color: $color-gray-light;
-	color: $color-primary-5;
-	background-color: $color-complement-1;
+	color: $color-gray-medium-light;
+	background-color: $color-white;
+
+	h1, div > h4 {
+		color: $color-primary-5;
+		font-weight: bold;
+	}
 }
 
 #content4-block {
