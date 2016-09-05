@@ -76,7 +76,7 @@ $(document).ready(function() {
 
     $('html, body').animate({
       scrollTop: targetposition
-    }, 300);
+    }, 1000);
   });
 
 
@@ -177,6 +177,28 @@ $(document).ready(function() {
 
 
 
+  // section-title color-animations
+  $(".section-title .layer").waypoint(function(direction) {
+    if (direction == "down") {
+      $(this).stop().animate({backgroundColor: 'rgba(0, 153, 153, 0.7)'}, 700);
+    } else {
+      $(this).stop().animate({backgroundColor: 'rgba(85, 140, 102, 0.7)'}, 700);
+    }
+  }, {offset: '10%'}).waypoint(function(direction) {
+    if (direction == "down") {
+      $(this).stop().animate({backgroundColor: 'rgba(85, 140, 102, 0.7)'}, 700);
+    } else {
+      $(this).stop().animate({backgroundColor: 'rgba(170, 129, 51, 0.7)'}, 700);
+    }
+  }, {offset: '35%'}).waypoint(function(direction) {
+    if (direction == "down") {
+      $(this).stop().animate({backgroundColor: 'rgba(170, 129, 51, 0.7)'}, 700);
+    } else {
+      $(this).stop().animate({backgroundColor: 'rgba(255, 116, 0, 0.7)'}, 700);
+    }
+  }, {offset: '60%'});
+
+
 
 
   // First page slider animations
@@ -204,14 +226,9 @@ $(document).ready(function() {
     var $targetsection = $("#content-body").children().eq(childindex).find(":first-child");
     var targetposition = $targetsection.offset().top;
 
-
-    if ($(window).width() < 768 && childindex != 0) {
-      targetposition = targetposition - 50;
-    }
-
     $('html, body').animate({
-    scrollTop: targetposition
-    }, 300);
+      scrollTop: targetposition
+    }, 1000);
   });
 });
 
