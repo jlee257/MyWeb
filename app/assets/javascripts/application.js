@@ -23,6 +23,8 @@
 $(document).ready(function() {
 
   // Menu items active
+  var $navlink = $(".custom-nav ul li a");
+
   $(".section-block").waypoint(function(direction) {
     var childindex = $(this).parent().index();
 
@@ -33,9 +35,35 @@ $(document).ready(function() {
 
     $targetitem = $(".custom-nav ul li").eq(childindex);
     $targetitem.addClass("active");
+
+
+    $(".custom-nav ul li a h3").css("display", "inline-block");
+    clearTimeout($navlink.t);
+    $navlink.stop().animate({width: "280px"}, {duration: 300});
+    $navlink.t = setTimeout(function() {
+      $navlink.stop().animate({width: "60px"}, 300, function() {
+        $(".custom-nav ul li a h3").css("display", "none");
+      });
+    }, 3000);
+
   }, {offset: "30%"});
 
 
+  // navbar hover
+  $navlink.hover(
+    function() {
+      $(".custom-nav ul li a h3").css("display", "inline-block");
+      clearTimeout($navlink.t);
+      $navlink.stop().animate({width: "280px"}, {duration: 300});
+    },
+    function() {
+      $navlink.t = setTimeout(function() {
+        $navlink.stop().animate({width: "60px"}, 300, function() {
+          $(".custom-nav ul li a h3").css("display", "none");
+        });
+      }, 3000);
+    }
+  );
 
 
   // Menu items auto scrolling
@@ -52,17 +80,15 @@ $(document).ready(function() {
   });
 
 
-
-
   // Bootstrap Navbar fade-in/fad-out
   $(".custom-nav").hide();
   
   $(function () {
     $(window).scroll(function () {
       if ($(this).scrollTop() > $(window).height()/2) {
-        $('.custom-nav').fadeIn();
+        $('.custom-nav').fadeIn({queue: false, duration: 200});
       } else {
-        $('.custom-nav').fadeOut();
+        $('.custom-nav').fadeOut({queue: false, duration: 200});
       }
     });
   });
