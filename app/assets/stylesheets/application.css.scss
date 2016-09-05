@@ -76,7 +76,7 @@ section#home {
 	color: $color-primary-5;
 
 	h3 {
-		font-weight: bold;
+		font-weight: 600;
 		line-height: 10vh;
 		margin: 0;
 	}
@@ -458,9 +458,7 @@ p {
 .slider-element-image {
 	position: absolute;
 	height: 40vh;
-	max-height: 626px;
 	width: 40vh;
-	max-width: 626px;
 	top: 5vh;
 	left: 10vw;
 	transform: skewX(20deg);
@@ -482,6 +480,21 @@ p {
 	&#symbol-4 {
 		background-image: url('/images/icon_4.png');
 	}
+}
+
+.slider-element-svg {
+	position: absolute;
+	height: 40vh;
+	max-height: 626px;
+	width: 40vh;
+	max-width: 626px;
+	top: 5vh;
+	left: 10vw;
+	transform: skewX(20deg);
+}
+
+#symbol-3 {
+	transform: skewX(20deg) rotate(-30deg);
 }
 
 h1, h2 {
@@ -554,6 +567,10 @@ hr {
     background-size: cover;
 }
 
+.title-triangle {
+	display: none;
+}
+
 
 
 
@@ -601,6 +618,9 @@ hr {
 		font-size: 4vw;
 	}
 
+	.title-triangle {
+		display: inline;
+	}
 
 }
 

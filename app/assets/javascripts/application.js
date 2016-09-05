@@ -39,12 +39,12 @@ $(document).ready(function() {
 
     $(".custom-nav ul li a h3").css("display", "inline-block");
     clearTimeout($navlink.t);
-    $navlink.stop().animate({width: "280px"}, {duration: 300});
+    $navlink.stop().animate({width: "280px"}, {duration: 200});
     $navlink.t = setTimeout(function() {
-      $navlink.stop().animate({width: "60px"}, 300, function() {
+      $navlink.stop().animate({width: "60px"}, 200, function() {
         $(".custom-nav ul li a h3").css("display", "none");
       });
-    }, 3000);
+    }, 2000);
 
   }, {offset: "30%"});
 
@@ -54,14 +54,14 @@ $(document).ready(function() {
     function() {
       $(".custom-nav ul li a h3").css("display", "inline-block");
       clearTimeout($navlink.t);
-      $navlink.stop().animate({width: "280px"}, {duration: 300});
+      $navlink.stop().animate({width: "280px"}, {duration: 200});
     },
     function() {
       $navlink.t = setTimeout(function() {
-        $navlink.stop().animate({width: "60px"}, 300, function() {
+        $navlink.stop().animate({width: "60px"}, 200, function() {
           $(".custom-nav ul li a h3").css("display", "none");
         });
-      }, 3000);
+      }, 1000);
     }
   );
 
@@ -155,7 +155,7 @@ $(document).ready(function() {
       // $(this).fadeIn({queue: false, duration: 'fast'});
       $(this).animate({marginRight : "-=150px", marginLeft: "+=150px", opacity: 1}, 'fast');
     }
-  }, {offset:'75%'});
+  }, {offset:'75%'}, {triggerOnce: true});
 
   $(".right-side").waypoint(function(direction) {
     if (direction == "up") {
@@ -165,7 +165,7 @@ $(document).ready(function() {
       // $(this).fadeIn({queue: false, duration: 'fast'});
       $(this).animate({marginLeft : "-=150px", marginRight: "+=150px", opacity: 1}, 'fast');
     }
-  }, {offset:'75%'}, {triggerOnce: false});
+  }, {offset:'75%'}, {triggerOnce: true});
 
   $(".hr-long").waypoint(function(direction) {
     if (direction == "up") {
@@ -184,19 +184,19 @@ $(document).ready(function() {
     } else {
       $(this).stop().animate({backgroundColor: 'rgba(85, 140, 102, 0.7)'}, 700);
     }
-  }, {offset: '10%'}).waypoint(function(direction) {
+  }, {offset: '15%'}).waypoint(function(direction) {
     if (direction == "down") {
       $(this).stop().animate({backgroundColor: 'rgba(85, 140, 102, 0.7)'}, 700);
     } else {
       $(this).stop().animate({backgroundColor: 'rgba(170, 129, 51, 0.7)'}, 700);
     }
-  }, {offset: '35%'}).waypoint(function(direction) {
+  }, {offset: '40%'}).waypoint(function(direction) {
     if (direction == "down") {
       $(this).stop().animate({backgroundColor: 'rgba(170, 129, 51, 0.7)'}, 700);
     } else {
       $(this).stop().animate({backgroundColor: 'rgba(255, 116, 0, 0.7)'}, 700);
     }
-  }, {offset: '60%'});
+  }, {offset: '65%'});
 
 
 
