@@ -16,7 +16,8 @@
 $grid-float-breakpoint: 993px;
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import 'https://fonts.googleapis.com/css?family=Josefin+Sans';
+@import 'https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700';
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
 
 
 // Mainpage wrapping elements
@@ -173,7 +174,9 @@ section#home {
 	display: block;
 	color: $color-white;
 	width: 10em;
-	padding-left: 5px;
+	height: 2em;
+	line-height: 2em;
+	padding-left: 7px;
 	margin-bottom: 5px;
 
 	&.ext-link-github {
@@ -505,6 +508,9 @@ h1 {
 	font-size: 42px;
 }
 
+h3, h4, h5, h6, p, li, a {
+	font-family: 'Lato', sans-serif !important;
+}
 // div.row {
 // 	margin: 0;
 // }
